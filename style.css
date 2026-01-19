@@ -14,6 +14,16 @@ body {
     color: #333;
 }
 
+.main-wrapper {
+    max-width: 720px;   /* 최대 폭을 720px로 제한 */
+    margin: 0 auto;     /* 좌우 여백을 자동으로 설정하여 중앙 배치 */
+    background-color: #fff; /* PC 배경과 구분되도록 흰색 배경 권장 */
+    min-height: 100vh;  /* 화면 높이가 낮아도 배경이 꽉 차도록 설정 */
+    
+    /* 선택 사항: PC에서 볼 때 좌우에 가벼운 그림자를 주면 더 입체적입니다 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
 /* 상단 초록 바 */
 .header-bar {
     background-color: #5EFFAD; /* 시안의 초록색 */
@@ -35,10 +45,9 @@ body {
 }
 
 /* 각 섹션 배경 이미지 (파일 경로를 맞춰주세요) */
-.visual-01 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg01.jpg'); }
-.visual-02 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg02.jpg'); }
-.visual-03 { 
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg03.jpg');
+.visual-01 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/img1.jpg'); }
+.visual-02 { 
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/img2.jpg');
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
