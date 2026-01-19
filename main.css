@@ -1,0 +1,27 @@
+/* 1. 인코딩 설정: 특수문자나 한글 주석 깨짐 방지 */
+@charset "UTF-8";
+
+/* 2. 전체 박스 사이징 설정: 여백과 테두리를 너비에 포함시킴 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 3. 기본 여백 제거: 브라우저마다 다른 기본 마진과 패딩 초기화 */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* 4. HTML5 요소의 기본 설정 */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: sans-serif; /* 기본 폰트 설정 */
+}
+
+/* 5. 이미지 다루기 편하게 설정 */
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+
