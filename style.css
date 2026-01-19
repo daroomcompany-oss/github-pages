@@ -1,27 +1,93 @@
-/* 1. 인코딩 설정: 특수문자나 한글 주석 깨짐 방지 */
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-/* 2. 전체 박스 사이징 설정: 여백과 테두리를 너비에 포함시킴 */
-*, *::before, *::after {
-  box-sizing: border-box;
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* 3. 기본 여백 제거: 브라우저마다 다른 기본 마진과 패딩 초기화 */
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
-  margin: 0;
-}
-
-/* 4. HTML5 요소의 기본 설정 */
 body {
-  min-height: 100vh;
-  line-height: 1.5;
-  font-family: sans-serif; /* 기본 폰트 설정 */
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* 5. 이미지 다루기 편하게 설정 */
-img, picture {
-  max-width: 100%;
-  display: block;
+/* 상단 초록 바 */
+.header-bar {
+    background-color: #5EFFAD; /* 시안의 초록색 */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
 }
 
+/* 공통 섹션 스타일 */
+.section {
+    position: relative;
+    width: 100%;
+    height: 450px; /* 이미지 높이에 따라 조절하세요 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 40px;
+}
 
+/* 각 섹션 배경 이미지 (파일 경로를 맞춰주세요) */
+.visual-01 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg01.jpg'); }
+.visual-02 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg02.jpg'); }
+.visual-03 { 
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg03.jpg');
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 텍스트 배치 */
+.text-box {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.top-left { align-self: flex-start; }
+.bottom-right { 
+    margin-left: auto;
+    margin-top: auto;
+    text-align: right; 
+}
+.center-bottom {
+    text-align: center;
+    margin-top: auto;
+}
+
+.sub-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* 로고 섹션 */
+.logo-section {
+    padding: 80px 0;
+    text-align: center;
+}
+.logo-section img { width: 200px; }
+.foforin-logo { width: 120px; align-self: flex-start; }
+
+/* 푸터 */
+footer {
+    padding: 60px 40px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #666;
+}
+
+footer hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+footer p { margin-bottom: 5px; }
